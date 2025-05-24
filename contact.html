@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Reference Example</title>
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Vidaloka&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    
+</head>
+    <header class="site-header">
+        <div class="container">
+            <img class="top-logo" src="images/right_logo.png">                     
+            <button class="hamburger-button" aria-label="Toggle Menu" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+            <nav class="main-nav">
+                <ul class="nav-list" id="primary-navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="details.html">Details</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact">
+            <div class="container">
+                <div class="contact-images">
+                    <img class="front-image2" src="images/IMG_2921.JPG">
+                    <img class="back-image2" src="images/Contact1.jpg">
+                </div>
+                <div class="contact-text" id="scroll-target">    
+                    <p>Whether you’re ready to book a session, have a question, or just want to say hello, I’d love to hear from you! I promise to get back to you as soon as I can. Looking forward to capturing your best moments.</p>
+                    <div class="contact-form-box">
+                        <div class="contact-form">
+                            <form action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="33dfe76d-9f14-40da-83c7-aaf60303c31a">
+                                <input type="text" name="type" placeholder="Session Type (E.g. Wedding)*" class="contact-input" required>
+                                <input type="name" name="name" placeholder="Your Name*" class="contact-input" required>
+                                <input type="email" name="email" placeholder="Your Email*" class="contact-input" required>
+                                <input type="phone" name="phone" placeholder="Your Phone Number" class="contact-input">
+                                <textarea type="message" name="message" placeholder="Your Message*" class="contact-textarea" required></textarea>
+                                <button type="submit" class="contact-button">Submit</button>
+                            </form>                      
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </section>
+    </main> <!-- End of main content -->
+
+    <footer class="site-footer">
+        <div class="container">
+
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="details.html">Details</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Footer social media -->
+                
+
+                <!-- Footer Image Grid
+                <div class="footer-image-grid">
+                    <div class="footer-image-item">
+                        <img src="https://via.placeholder.com/150/CCCCCC/FFFFFF?text=Image+1" alt="Placeholder Image 1" class="footer-grid-image">
+                    </div>
+                    <div class="footer-image-item">
+                        <img src="https://via.placeholder.com/150/AAAAAA/FFFFFF?text=Image+2" alt="Placeholder Image 2" class="footer-grid-image">
+                    </div>
+                    <div class="footer-image-item">
+                        <img src="https://via.placeholder.com/150/888888/FFFFFF?text=Image+3" alt="Placeholder Image 3" class="footer-grid-image">
+                    </div>
+                </div> -->
+
+                <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+            <script src="https://static.elfsight.com/platform/platform.js" async></script>
+            <div class="elfsight-app-9570e38a-eafe-4522-aef4-432acbeca144" data-elfsight-app-lazy></div>
+
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#">Instragram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+            </nav>
+
+
+            <!-- Copyright -->
+            <p class="copyright-text">© 2023 MyWebsite. All Rights Reserved.</p>
+
+        </div>
+    </footer>
+
+<!-- Form -->
+<script src="#"></script>
+
+<script>
+    window.addEventListener('load', () => {
+
+// --- Specify the ID of the element you want to scroll to ---
+const targetElementId = 'scroll-target';
+
+// Find the target element on the page
+const targetElement = document.getElementById(targetElementId);
+
+if (targetElement) {
+    
+    targetElement.scrollIntoView({
+        behavior: 'smooth', 
+        block: 'start'
+
+        });
+    }
+});
+</script>
+
+<script src="hamb_menu.js"></script>   
+
+</body>
+</html>
