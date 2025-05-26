@@ -472,27 +472,31 @@ p {
 .about {
     min-height: 100vh;
     width: 100%;
-    display: flex; /* Makes elements aligned side by side */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
     padding: 60px 0;
-    background-color: #ffffff; /* Example: White background */
-    margin-bottom: 50px;
+    background-color: #ffffff;
+    margin-bottom: 50px;    
+}
+
+.about-heading {
+    margin-bottom: 500px;
+}
+
+.about h2 {
+    color: #7b7672;
+    text-align: center
+    
 }
 
 .about a {
     margin-top: 40px;
 }
 
-.about-desktop {
+.about-heading {
     margin-bottom: 15px;
     font-size: 3em;
-}
-
-@media (min-width: 620px) {
-    .about-mobile {
-        display: none;
-    }
 }
 
 .about p {
@@ -538,18 +542,7 @@ p {
 @media (max-width: 620px) {
     .about {
        margin-top: 300px;
-    }
-
-    .about-desktop {
-        display: none;
-    }
-
-    .about-mobile{
-        font-size: 3em;
-        writing-mode: vertical-rl; 
-        text-orientation: mixed; 
-        margin-top: -300px;
-        color: #7b7672;
+       
     }
     
     .about .container {
@@ -631,7 +624,7 @@ p {
 }
 
 .feature-img {
-    max-width: 56vh;
+    
 }
 
 .feature-btn h3 {
@@ -1332,6 +1325,9 @@ body.lightbox-open {
     text-decoration: underline;
 }
 
+.elfsight-app-9570e38a-eafe-4522-aef4-432acbeca144.closed {
+    display: none;
+}
 
 /* --- Footer Image Grid --- */
 .footer-image-grid {

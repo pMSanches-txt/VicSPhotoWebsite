@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => { // Use DOMContentLoaded
 
     const closeBtn = document.querySelectorAll('.close-btn');
 
+    const widget = document.querySelector('.elfsight-app-9570e38a-eafe-4522-aef4-432acbeca144');
+
     btns.forEach(button => {
         button.addEventListener('click', () => {
             const target_gallery_id = button.dataset.galleryTarget; // e.g., "gallery-weddings"
@@ -26,7 +28,9 @@ document.addEventListener('DOMContentLoaded', () => { // Use DOMContentLoaded
                 console.error(`Could not find gallery with ID: ${target_gallery_id}`);
              } 
 
-             button.classList.add('active'); // Add active style to the clicked button
+             button.classList.add('active');
+
+             widget.classList.add('closed'); 
         });
     });
 
@@ -39,7 +43,9 @@ document.addEventListener('DOMContentLoaded', () => { // Use DOMContentLoaded
             btns.forEach(btn => {
                 btn.classList.remove('active');
             });
-    
+            
+            widget.classList.remove('closed'); 
+
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
