@@ -59,6 +59,7 @@ h1 {
   }
 
 h2 {
+    font-size: 2.5em;
     font-family: "Vidaloka", serif;
     font-weight: 400;
     font-style: normal;
@@ -78,8 +79,9 @@ h2 {
 }
 
 h3 {
-    font-family: "Arapey", serif;
-    font-weight: 400;
+    font-size: 2em;
+    font-family: "Vidaloka", serif;
+    font-weight: 300;
     font-style: normal;
     color: #333;
     
@@ -89,7 +91,7 @@ p {
     font-family: "Arapey", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.15em;
+    font-size: 1.30em;
     color: #333; /* CHANGE: Base paragraph color */
 }
 
@@ -138,15 +140,6 @@ p {
     color: #fff;
     text-decoration: none;
 }
-
-
-
-
-
-
-
-
-
 /* --- Header --- */
 .site-header {
     background-color: #fafaf9; /* CHANGE: Header background color */
@@ -350,14 +343,6 @@ p {
     }
 }
 
-
-
-
-
-
-
-
-
 /* Index-Home */
 /* --- Hero Section --- */
 .home-hero {
@@ -372,7 +357,6 @@ p {
 }
 
 .home-hero p {
-    font-size: 1.1em;
     margin-bottom: 30px;
     max-width: 600px; /* Limit paragraph width */
     margin-left: auto;
@@ -480,24 +464,24 @@ p {
     margin-bottom: 50px;    
 }
 
-.about-heading {
-    margin-bottom: 500px;
+.about-h2-desktop {
+    margin-bottom: 15px;
+    font-size: 3em;
+
 }
 
-.about h2 {
-    color: #7b7672;
-    text-align: center
-    
+.about-h2-mobile {
+    display: none;
+}
+
+.about-text {
+    margin-top: -150px;
 }
 
 .about a {
     margin-top: 40px;
 }
 
-.about-heading {
-    margin-bottom: 15px;
-    font-size: 3em;
-}
 
 .about p {
     margin-bottom: 3px;
@@ -515,34 +499,66 @@ p {
 .about-text {
     width: 50%;
     margin-left: 100px;
-    
 }
 
 .about-images {
     display: flex;
     flex-shrink: 0;
-    width: 30%;
+    width: 50%;
     height: 100%;
     justify-content: center;
     align-items: center;    
     flex-direction: column;
 }
 
-.back-image {
-    max-width: 35vh;
-    margin-left: -75px;
-    margin-top: -80px;
-}
-
-.front-image {
-    max-width: 35vh;
-    margin-right: -100px;
+@media (max-width: 820px) {
+    .about {
+        margin-top: 50px;
+     }
+ 
+     .about-h2-desktop {
+         display: none;
+     }
+ 
+     .about-h2-mobile {
+         display: block;
+         font-size: 3.5em;
+     }
+ 
+     .about-images {
+         width: 60%;
+     }
+     
+     .about .container {
+         flex-direction: column; /* Stack text and images */
+         align-items: center; /* Center items */
+     }
+ 
+     .about-text {
+         margin-top: 30px;
+         padding: 15px;
+         width: 100%; /* Full width on small screens */
+         margin-left: 0; /* Remove left margin */
+         text-align: center; /* Center text */
+     }
 }
 
 @media (max-width: 620px) {
     .about {
-       margin-top: 300px;
-       
+       margin-top: 50px;
+    }
+
+    .about-h2-desktop {
+        display: none;
+    }
+
+    .about-h2-mobile {
+        display: block;
+        font-size: 3.5em;
+    }
+
+    .about-images {
+        width: 90%;
     }
     
     .about .container {
@@ -551,33 +567,13 @@ p {
     }
 
     .about-text {
-        margin-top: 130px;
+        margin-top: 30px;
         padding: 15px;
         width: 100%; /* Full width on small screens */
         margin-left: 0; /* Remove left margin */
         text-align: center; /* Center text */
     }
 
-    .about-images {
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        flex-direction: row;
-        margin-top: 20px; /* Space above images */
-        margin: 0 auto; /* Center images */
-    }
-
-    .back-image {
-        max-width: 35vh;
-        margin-bottom: -100px;
-    
-    }
-
-    .front-image {
-        margin-top: -500px;
-        max-width: 35vh;
-
-    }
 }
 
 /* --- Features Section --- */
@@ -634,25 +630,6 @@ p {
     text-shadow: #000000 0px 0px 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* --- Details Section --- */
 
 .pagePhrase {
@@ -679,16 +656,14 @@ p {
 }
 
 .detailsHeroText h2 {
-    font-size: 2.5em;
+    
     margin-bottom: 20px;
 }
 .detailsHeroText h3 {
-    font-size: 1.5em;
     /* margin-bottom: px; */ /* Invalid value */
     margin-bottom: 10px; /* Example */
 }
 .detailsHeroText p {
-    font-size: 1em;
     margin-bottom: 20px;
 }
 .detailsHeroText button {
@@ -779,18 +754,6 @@ p {
     background-color: #ffffff;
     opacity: 1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 /* --- Portfolio Section --- */
 
 .portfolio-hero-text {
@@ -848,7 +811,6 @@ p {
     margin-top: -44px;
     text-shadow: #333 0px 0px 20px;
     color: #ffffff;
-    text-decoration-line: underline;
 }
 
 .ptf-btn:hover {
@@ -1044,7 +1006,6 @@ p {
     }
 
 }
-
 /* --- Lightbox Styles --- */
 
 .lightbox {
@@ -1128,19 +1089,6 @@ p {
 body.lightbox-open {
     overflow: hidden;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* --- Contact Section --- */
 .scroll-target {
     margin-bottom: 200px;
@@ -1278,14 +1226,6 @@ body.lightbox-open {
     font-family: "Arapey", serif;
     font-weight: 700;
 }
-
-
-
-
-
-
-
-
 /* --- Footer --- */
 .site-footer {
     background-color: #fafaf9; /* CHANGE: Footer background color */
