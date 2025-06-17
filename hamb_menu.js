@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => { 
 
+    
     const hamburgerButton = document.querySelector('.hamburger-button');
     const navList = document.querySelector('.nav-list'); // Or select by ID: #primary-navigation
 
